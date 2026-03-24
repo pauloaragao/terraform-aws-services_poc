@@ -28,10 +28,13 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Terraform working directory and lock files
+.terraform/*
 .terraform.lock.hcl
 
-# Folder 
-.terraform/*
+# Local state lock metadata
+.terraform.tfstate.lock.info
 
 # Ignore plan files
 *.tfplan
@@ -50,9 +53,6 @@ terraform.rc
 aws-credentials
 aws-config
 credentials
-
-# Ignore lock file (optional - many teams do commit this)
-# .terraform.lock.hcl
 
 # OS files
 .DS_Store
