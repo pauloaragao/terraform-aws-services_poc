@@ -30,23 +30,23 @@ Cada módulo segue o padrão:
 Execute a partir da raiz do repositório:
 
 ```powershell
-terraform -chdir=<modulo> init
-terraform -chdir=<modulo> validate
-terraform -chdir=<modulo> plan
-terraform -chdir=<modulo> apply
+terraform -chdir=modules/<modulo> init
+terraform -chdir=modules/<modulo> validate
+terraform -chdir=modules/<modulo> plan
+terraform -chdir=modules/<modulo> apply
 ```
 
 Para destruir recursos:
 
 ```powershell
-terraform -chdir=<modulo> destroy
+terraform -chdir=modules/<modulo> destroy
 ```
 
 Exemplo para EC2:
 
 ```powershell
-terraform -chdir=ec2 init
-terraform -chdir=ec2 apply
+terraform -chdir=modules/ec2 init
+terraform -chdir=modules/ec2 apply
 ```
 
 ## Variáveis e tfvars
@@ -57,7 +57,7 @@ terraform -chdir=ec2 apply
 Exemplo:
 
 ```powershell
-Copy-Item .\ec2\terraform.tfvars-modelo .\ec2\terraform.tfvars
+Copy-Item .\modules\ec2\terraform.tfvars-modelo .\modules\ec2\terraform.tfvars
 ```
 
 ## Módulos
@@ -97,8 +97,8 @@ Observação de custo: Bedrock é pay-per-use. Não tratar como custo zero.
 ## Comandos úteis
 
 ```powershell
-terraform -chdir=<modulo> output
-terraform -chdir=<modulo> state list
-terraform -chdir=<modulo> fmt
+terraform -chdir=modules/<modulo> output
+terraform -chdir=modules/<modulo> state list
+terraform -chdir=modules/<modulo> fmt
 ```
 
