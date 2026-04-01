@@ -166,12 +166,9 @@ As policies para uso no console AWS ficam centralizadas em `policy-aws/`.
 Arquivos disponíveis:
 
 - `policy-aws/ec2-iam-policy.json`
-- `policy-aws/ec2-for-rds-iam-policy.json`
 - `policy-aws/rds-iam-policy.json`
 - `policy-aws/lambda-iam-policy.json`
-- `policy-aws/lambda-logs-policy.json`
 - `policy-aws/bedrock-iam.json`
-- `policy-aws/iam-bedrock-role.json`
 - `policy-aws/eks-iam-policy.json`
 
 ## Segurança
